@@ -8557,37 +8557,37 @@ triple invert(pair dir, triple v, projection P=currentprojection).
 @cindex @code{transform3}
 @cindex @code{identity4}
 Three-dimensional objects may be transformed with one of the following
-built-in transform3 types (the identity transformation is @code{identity4}):
+built-in @code{transform3} types (the identity transformation is @code{identity4}):
 
 @table @code
-@item shift(triple v)
+@item transform3 shift(triple v)
 @cindex @code{shift}
 translates by the triple @code{v};
-@item xscale3(real x)
+@item transform3 xscale3(real x)
 @cindex @code{xscale3}
 scales by @code{x} in the @math{x} direction;
-@item yscale3(real y)
+@item transform3 yscale3(real y)
 @cindex @code{yscale3}
 scales by @code{y} in the @math{y} direction;
-@item zscale3(real z)
+@item transform3 zscale3(real z)
 @cindex @code{zscale3}
 scales by @code{z} in the @math{z} direction;
-@item scale3(real s)
+@item transform3 scale3(real s)
 @cindex @code{scale3}
 scales by @code{s} in the @math{x}, @math{y}, and @math{z} directions;
-@item scale(real x, real y, real z)
+@item transform3 scale(real x, real y, real z)
 @cindex @code{scale}
 scales by @code{x} in the @math{x} direction,
 by @code{y} in the @math{y} direction, and by @code{z} in the @math{z}
 direction;
 @cindex @code{rotate}
-@item rotate(real angle, triple v)
+@item transform3 rotate(real angle, triple v)
 rotates by @code{angle} in degrees about the axis @code{O--v};
-@item rotate(real angle, triple u, triple v)
+@item transform3 rotate(real angle, triple u, triple v)
 rotates by @code{angle} in degrees about the axis @code{u--v};
-@item reflect(triple u, triple v, triple w)
+@item transform3 reflect(triple u, triple v, triple w)
 reflects about the plane through @code{u}, @code{v}, and @code{w}.
-@cindex @code{XY}
+@cindex @code{reflect}
 @end table
 
 When not multiplied on the left by a transform3, three-dimensional
